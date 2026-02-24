@@ -1,0 +1,7 @@
+{
+  "name": "default",
+  "displayName": "Default Theme",
+  "version": "1.0.0",
+  "author": "Webby",
+  "description": "The default Webby theme built with Tailwind CSS and Flowbite."
+}

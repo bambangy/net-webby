@@ -1,0 +1,57 @@
+@model PostDetailViewModel
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<div class="max-w-3xl mx-auto">
+    <article class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+        @if (!string.IsNullOrEmpty(Model.FeaturedImageUrl))
+        {
+            <img src="@Model.FeaturedImageUrl" alt="@Model.Title"
+                 class="w-full h-64 object-cover" />
+        }
+        <div class="p-8">
+            <header class="mb-6">
+                @if (Model.Categories.Any())
+                {
+                    <div class="flex gap-2 mb-3 flex-wrap">
+                        @foreach (var cat in Model.Categories)
+                        {
+                            <span class="bg-indigo-100 text-indigo-700 text-xs font-medium px-3 py-1 rounded-full">
+                                @cat
+                            </span>
+                        }
+                    </div>
+                }
+                <h1 class="text-3xl font-bold text-gray-900 mb-2">@Model.Title</h1>
+                @if (Model.PublishedAt.HasValue)
+                {
+                    <time class="text-sm text-gray-400">
+                        Published @Model.PublishedAt.Value.ToString("MMMM d, yyyy")
+                    </time>
+                }
+            </header>
+
+            <div class="prose prose-gray max-w-none text-gray-700 leading-relaxed">
+                @Html.Raw(Model.Content)
+            </div>
+
+            @if (Model.Tags.Any())
+            {
+                <footer class="mt-8 pt-6 border-t border-gray-100 flex gap-2 flex-wrap">
+                    @foreach (var tag in Model.Tags)
+                    {
+                        <span class="bg-gray-100 text-gray-500 text-xs px-3 py-1 rounded-full">
+                            #@tag
+                        </span>
+                    }
+                </footer>
+            }
+        </div>
+    </article>
+
+    <div class="mt-6">
+        <a asp-controller="Home" asp-action="Index"
+           class="text-sm text-indigo-600 hover:underline">&larr; Back to posts</a>
+    </div>
+</div>

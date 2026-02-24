@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Webby.Web/Webby.Web.csproj" />
+  <Project Path="Webby.Core/Webby.Core.csproj" />
+  <Project Path="Webby.Infrastructure/Webby.Infrastructure.csproj" />
+</Solution>

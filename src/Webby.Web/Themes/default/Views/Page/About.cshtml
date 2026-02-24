@@ -1,0 +1,13 @@
+@model AboutViewModel
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<div class="max-w-3xl mx-auto">
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+        <h1 class="text-3xl font-bold text-gray-900 mb-6">@Model.Title</h1>
+        <div class="prose prose-gray max-w-none text-gray-700 leading-relaxed">
+            @Html.Raw(Model.Content)
+        </div>
+    </div>
+</div>
