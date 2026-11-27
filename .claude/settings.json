@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(powershell -Command \"Rename-Item -Path ''src\\\\Webby'' -NewName ''Webby.Web''\")",
-      "Bash(powershell -Command:*)"
-    ]
-  }
-}

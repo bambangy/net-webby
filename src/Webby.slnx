@@ -1,5 +1,15 @@
 <Solution>
-  <Project Path="Webby.Web/Webby.Web.csproj" />
-  <Project Path="Webby.Core/Webby.Core.csproj" />
-  <Project Path="Webby.Infrastructure/Webby.Infrastructure.csproj" />
+  <Folder Name="/Core/">
+    <Project Path="Webby.Core.Contract/Webby.Core.Contract.csproj" Id="8331da42-63d8-443c-9c83-199947b31403" />
+    <Project Path="Webby.Core.Data/Webby.Core.Data.csproj" Id="97db480e-df0d-42d9-b4e0-700edafce847" />
+    <Project Path="Webby.Core.Pipeline/Webby.Core.Pipeline.csproj" Id="6e1193bd-c7a0-4153-926f-3e397ae013c2" />
+    <Project Path="Webby.Core.Shared/Webby.Core.Shared.csproj" Id="b4072f3b-8abf-4d9e-a7d4-a5a32fe534c3" />
+    <Project Path="Webby.Core.Theme/Webby.Core.Theme.csproj" Id="0d7e529f-686f-4c77-ac09-1cb3163189f1" />
+  </Folder>
+  <Folder Name="/Modules/" />
+  <Folder Name="/Modules/Cms/" />
+  <Folder Name="/Modules/Membership/" />
+  <Folder Name="/Modules/Security/" />
+  <Project Path="Webby.Presentation.Web/Webby.Presentation.Web.csproj" Id="b627af8f-f0da-4fc5-ac3e-ddd1c4dc7b1b" />
+  <Project Path="Weeby.Presentation.Migrator/Weeby.Presentation.Migrator.csproj" Id="73f3ea69-c56f-4da1-a09a-cf22a8dd3b56" />
 </Solution>
